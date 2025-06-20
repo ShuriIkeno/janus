@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janus - 双貌のAI執事</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🎭 Janus</h1>
+            <p class="tagline">過去の知識と未来の機会を繋ぐAI執事</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Mode Toggle -->
+            <div class="mode-toggle">
+                <button id="pastModeBtn" class="mode-btn active" data-mode="past">
+                    📚 Past Mode<br><small>記録官 - The Archivist</small>
+                </button>
+                <button id="futureModeBtn" class="mode-btn" data-mode="future">
+                    🔮 Future Mode<br><small>機会発見官 - The Pathfinder</small>
+                </button>
+            </div>
+
+            <!-- Past Mode -->
+            <div id="pastMode" class="mode-content active">
+                <section class="capture-section">
+                    <h2>💡 好奇心をキャプチャ</h2>
+                    <div class="capture-form">
+                        <div class="form-group">
+                            <label for="captureType">種類:</label>
+                            <select id="captureType">
+                                <option value="url">URL</option>
+                                <option value="text">テキスト</option>
+                                <option value="voice">音声メモ</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="captureContent">内容:</label>
+                            <textarea id="captureContent" placeholder="URLやテキストを入力..."></textarea>
+                        </div>
+                        <button id="captureBtn" class="primary-btn">キャプチャ</button>
+                    </div>
+                </section>
+
+                <section class="digest-section">
+                    <h2>🌅 朝のダイジェスト</h2>
+                    <div id="digestList" class="digest-list">
+                        <!-- ダイジェストアイテムが動的に追加される -->
+                    </div>
+                    <button id="refreshDigestBtn" class="secondary-btn">ダイジェスト更新</button>
+                </section>
+            </div>
+
+            <!-- Future Mode -->
+            <div id="futureMode" class="mode-content">
+                <section class="calendar-section">
+                    <h2>📅 今後の予定</h2>
+                    <div id="upcomingEvents" class="events-list">
+                        <!-- 予定が動的に追加される -->
+                    </div>
+                    <button id="refreshEventsBtn" class="secondary-btn">予定を更新</button>
+                </section>
+
+                <section class="briefing-section">
+                    <h2>📋 ブリーフィング</h2>
+                    <div id="briefingList" class="briefing-list">
+                        <!-- ブリーフィングが動的に追加される -->
+                    </div>
+                    <button id="generateBriefingBtn" class="primary-btn">ブリーフィング生成</button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Janus - 双貌のAI執事</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
